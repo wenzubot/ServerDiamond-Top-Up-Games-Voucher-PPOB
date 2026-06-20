@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "./topup-api/server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/topup-api/server.js"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  }
+}
